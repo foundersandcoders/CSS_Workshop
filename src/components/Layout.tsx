@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { Navigation } from './Navigation';
+import './Layout.css';
 
 interface LayoutProps {
   children: ReactNode;
@@ -7,14 +8,16 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div>
+    <div className="layout">
       <header>
-        <div>
-          <h1>PinClone</h1>
-          <Navigation />
-        </div>
+        <h1>PinClone</h1>
+        <Navigation />
       </header>
-      <main>{children}</main>
+      <main>
+        <div className="main-content">
+          {children}
+        </div>
+      </main>
     </div>
   );
 };

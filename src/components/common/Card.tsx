@@ -1,4 +1,5 @@
 import { ReactNode, MouseEvent } from 'react';
+import './Card.css';
 
 interface CardProps {
   children: ReactNode;

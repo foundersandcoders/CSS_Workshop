@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Navigation.css';
 
 interface NavItem {
   label: string;
@@ -38,15 +39,19 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav>
-      <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <div className="navigation">
+      <nav>
+        <button className="menu-button"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className={`${isOpen ? 'closed' : 'open'}`}>OPEN ME</span>
+          <span className={`${isOpen ? 'open' : 'closed'}`}>CLOSE ME</span>
+        </button>
 
-      <div>
-        <ul>
+        <div className="spacer"></div>
+
+        <ul className={`${isOpen ? 'open' : 'closed'}`}>
           {navItems.map((item) => (
             <li key={item.label}>
               <a href={item.href || '#'}>
@@ -56,7 +61,7 @@ export const Navigation = () => {
             </li>
           ))}
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };

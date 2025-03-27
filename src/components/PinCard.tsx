@@ -3,6 +3,7 @@ import { Button } from './common/Button';
 import { Icon } from './common/Icon';
 import { Avatar } from './common/Avatar';
 import { Card } from './common/Card';
+import './PinCard.css';
 
 interface PinCardProps {
   title: string;
@@ -43,14 +44,12 @@ export const PinCard = ({
   };
 
   const handleShare = () => {
-    // Implement share functionality
     console.log('Sharing pin:', title);
-  };
+};
 
   return (
-    <Card>
-      {/* Image Container */}
-      <div>
+    <Card className="pin-card">
+      <div className="pin-card-image">
         <img src={imageUrl} alt={title} />
         
         {/* Overlay Actions */}
@@ -81,19 +80,16 @@ export const PinCard = ({
         </div>
       </div>
 
-      {/* Content */}
-      <div>
+      <div className="pin-card-content">
         <h3>{title}</h3>
         <p>{description}</p>
 
-        {/* Author */}
-        <div>
+        <div className="pin-card-author">
           <Avatar src={author.avatar} alt={author.name} size="sm" />
           <span>{author.name}</span>
         </div>
 
-        {/* Stats */}
-        <div>
+        <div className="pin-card-stats">
           <Button
             variant="ghost"
             size="sm"

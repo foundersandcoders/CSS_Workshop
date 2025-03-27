@@ -1,5 +1,6 @@
 import { Layout } from './components/Layout';
 import { PinCard } from './components/PinCard';
+import './App.css';
 
 const pins = [
   {
@@ -85,20 +86,18 @@ const pins = [
 function App() {
   return (
     <Layout>
-      <div>
-        {pins.map((pin) => (
-          <PinCard
-            key={pin.id}
-            title={pin.title}
-            description={pin.description}
-            imageUrl={pin.imageUrl}
-            author={pin.author}
-            likes={pin.likes}
-            comments={pin.comments}
-            saves={pin.saves}
-          />
-        ))}
-      </div>
+      {pins.map((pin) => (
+        <PinCard
+          key={pin.id}
+          title={pin.title}
+          description={pin.description}
+          imageUrl={pin.imageUrl}
+          author={pin.author}
+          likes={pin.likes}
+          comments={pin.comments}
+          saves={pin.saves}
+        />
+      ))}
     </Layout>
   );
 }
