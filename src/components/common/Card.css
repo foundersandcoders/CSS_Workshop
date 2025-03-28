@@ -1,7 +1,0 @@
-.card {
-  outline: 1px dashed #bbbbbb;
-  background-color: #dddddd;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-}

@@ -1,6 +1,7 @@
 import { Layout } from './components/Layout';
-import { PinCard } from './components/PinCard';
-import './App.css';
+import { Card } from './components/Card';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './styles/theme';
 
 const pins = [
   {
@@ -85,9 +86,9 @@ const pins = [
 
 function App() {
   return (
-    <Layout>
-      {pins.map((pin) => (
-        <PinCard
+    <ThemeProvider theme={theme}>
+      <Layout>
+        {pins.map((pin) => ( <Card
           key={pin.id}
           title={pin.title}
           description={pin.description}
@@ -96,9 +97,9 @@ function App() {
           likes={pin.likes}
           comments={pin.comments}
           saves={pin.saves}
-        />
-      ))}
-    </Layout>
+        /> ))}
+      </Layout>
+    </ThemeProvider>
   );
 }
 

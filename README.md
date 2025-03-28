@@ -2,9 +2,13 @@
 
 This is a React project that will be styled using different CSS approaches. The project contains a basic UI structure that you'll style using various modern CSS techniques.
 
+## App Purpose
+
+This is an absurdist project based on the idea "what if an overexcited piglet created a friend-finder app?"
+
 ## Project Structure
 
-```
+```src
 base-project/
 ├── src/
 │   ├── components/
@@ -18,27 +22,22 @@ base-project/
 ## Tasks
 
 You'll be styling this project using different approaches:
+
 1. **Vanilla CSS**
    - No libraries or frameworks, the point of this is dive deep into the modern state of CSS
    Some good places to start:
    - Read this on how modern compare with something like SCSS and new features:
       - [World of CSS](https://dev.to/worldoftheweb/is-css-the-new-sass-heres-what-you-need-to-know-in-2025-4254)
       - [Css Tricks](https://css-tricks.com/guides/)
-
-
 2. **Tailwind CSS**
-
    - Install and configure Tailwind CSS
    - Style components using utility classes
    - Create responsive designs
    - Understand how media queries and pseudo elements work
-
 3. **Styled Components**
-
    - Set up styled-components
    - Create styled versions of components
    - Implement theme support
-
 4. **CSS Modules (If we have time)**
    - Create CSS modules for each component
    - Implement scoped styles
@@ -46,15 +45,18 @@ You'll be styling this project using different approaches:
 
 ## Getting Started
 
-1. Clone this repository
-2. Install dependencies:
-   ```bash
-   pnpm install
-   ```
-3. Start the development server:
-   ```bash
-   pnpm dev
-   ```
+- Clone this repository
+- Install dependencies:
+
+```bash
+pnpm install
+```
+
+- Start the development server:
+
+```bash
+pnpm dev
+```
 
 ## Development
 
